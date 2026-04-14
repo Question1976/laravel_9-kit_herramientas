@@ -1,0 +1,75 @@
+xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+
+TABLAS Y MODELOS:
+
+xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+
+Crear tabla 'categorias':
+    php artisan make:migration create_categorias_table 
+    php artisan make:migration create_categorias_table --create=categorias   (otra forma)
+    php artisan migrate
+
+Crear tabla 'productos' con llave foranea hacia 'categorias':
+    php artisan make:migration create_productos_table
+    php artisan make:migration create_productos_table --create=productos    (otra forma)
+    php artisan migrate
+
+Crear tabla 'productos_fotos' (va a tener el ID de la tabla 'productos'):
+    php artisan make:migration create_productos_fotos_table
+    php artisan make:migration create_productos_fotos_table --create=productos_fotos    (otra forma)
+    php artisan migrate
+
+Crear modelo para tabla 'categorias' (un modelo para cada tabla):
+    php artisan make:model Categorias
+
+Crear modelo para tabla 'productos' con llave foranea hacia 'categorias' (ver Models/Productos.php):
+    php artisan make:model Productos
+
+Crear modelo para tabla 'productos_fotos' con llave foranea hacia 'productos' 
+(ver Models/ProductosFotos.php):
+    php artisan make:model ProductosFotos
+
+xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+
+UTILIDADES:
+
+xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+
+Utilidades/librerías externas (se instalan en la carpeta 'vendor'):
+- Instalar librería 'mpdf' (reportes en pdf):
+    composer require mpdf/mpdf --with-all-dependencies
+
+- Instalar librería 'phpoffice' (reportes en excel):
+    composer require phpoffice/phpspreadsheet
+
+xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+
+LOGIN/REGISTRO:
+Usuario: César Cancino  | Yelimar Díaz        | Salvador (admin)
+correo: info@tamila.cl  | marimar@tamila.cl   | correo@correo.com
+pass: 123456            | 123456              | 123456
+
+xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+
+- Crear tabla 'perfil':
+    php artisan make:migration create_perfil_table
+    php artisan migrate
+
+- Crear tabla 'user_metadata':
+    php artisan make:migration create_user_metadata_table
+    php artisan migrate
+
+- Crear modelo para tabla 'perfil':
+    php artisan make:model Perfil
+
+- Crear modelo para tabla 'user_metadata':
+    php artisan make:model UserMetadata
+
+xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+
+MIDDLEWARES:
+
+xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+
+- Crear middleware personalizado:
+    php artisan make:middleware Acceso
