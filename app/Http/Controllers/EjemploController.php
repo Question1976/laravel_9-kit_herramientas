@@ -14,7 +14,7 @@ class EjemploController extends Controller
      */
     public function index()
     {
-        echo "Hola Salva desde el endpoint";
+        echo "Método GET";
     }
 
     /**
@@ -25,7 +25,7 @@ class EjemploController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        echo "Método POST";
     }
 
     /**
@@ -36,7 +36,7 @@ class EjemploController extends Controller
      */
     public function show($id)
     {
-        //
+        echo "Método GET con parámetros | id = " . $id;
     }
 
     /**
@@ -48,7 +48,7 @@ class EjemploController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        echo "Método PUT | id = " . $id;
     }
 
     /**
@@ -59,6 +59,6 @@ class EjemploController extends Controller
      */
     public function destroy($id)
     {
-        //
+        echo "Método DELETE | id = " . $id;
     }
 }
