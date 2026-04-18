@@ -73,3 +73,15 @@ xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
 
 - Crear middleware personalizado:
     php artisan make:middleware Acceso
+
+xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+
+AUTH API:
+
+xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+
+- Instalar 'firebase (php-jwt)' para 'Basic Auth':
+    composer require firebase/php-jwt
+
+- Crear middleware para proteger las rutas de la api de forma personalizada:
+    php artisan make:middleware Verificacion
